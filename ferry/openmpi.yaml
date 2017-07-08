@@ -1,0 +1,29 @@
+backend:
+   - storage:
+        personality: "gluster"
+        instances: 2
+     compute:
+        - personality: "mpi"
+          instances: 2
+connectors:
+   - personality: "mpi-client"
+     name: "control-0"
+
+#There are two main sections: the backend and connectors.
+#In this example, we’re defining a single storage backend and a single compute backend.
+#This backend is going to run two instances of gluster and mpi.
+
+#We’ll also instantiate an MPI connector.
+#The client will automatically mount the Gluster volume and contain all the necessary configuration
+#to launch new MPI jobs.
+
+#By default the Gluster volume is mounted under /service/data.
+#You can remount the directory to wherever you like.
+#Once you’ve started your application and logged into your client, type mount to see the mount configuration.
+
+#Note that we’ve assigned a name to our client (control-0).
+#This is an optional user-defined value.
+#It helps if you have multiple clients and you want a simple way to ssh into a specific client.
+
+# $ferry start openmpi
+# $sudo ferry server
