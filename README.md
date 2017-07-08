@@ -6,7 +6,7 @@
 
 **Check Version Installed**
 --
- `$ python`
+$ python`
 	>>> from mpi4py import MPI
 	>>> MPI.Get_version()
 			Gives the version of the standard to which the MPI library conforms; 					 major/minor versions
@@ -43,7 +43,8 @@ When you issue the mpirun command, you specify the name of the hostfile or host 
 MPI does the initial scheduling, but for more than one process per node, or just in general (since there are a number of other processes running in the background too),the Linux kernel scheduler takes over.
 
 
-##**CPU Information**
+**CPU Information**
+
 https://www.cyberciti.biz/faq/lscpu-command-find-out-cpu-architecture-information/
 
 **Linux :**
@@ -66,6 +67,7 @@ Chip Brand — Processor Type and Chip Model — CPU Speed
 ` $ system_profiler | grep Processor`
 
 **Logical Cores**
+
 `$ sysctl hw.logicalcpu`
 
 Hyperthreading technology makes each physical core appear as two logical cores. This lets each core handle two execution threads.
@@ -75,8 +77,11 @@ Hyperthreading technology makes each physical core appear as two logical cores. 
 `$ sysctl hw.logicalcpu`
 
 *hw.physicalcpu* - The number of physical processors available in the current power management mode.
+
 *hw.physicalcpu_max* - The maximum number of physical processors that could be available this boot.
+
 *hw.logicalcpu* - The number of logical processors available in the current power management mode.
+
 *hw.logicalcpu_max* - The maximum number of logical processors that could be available this boot.
 
 > Cores process one thread of program code at a time (unless they are hyperthreaded, in which case they process two threads at a time).
