@@ -6,12 +6,17 @@
 
 **Check Version Installed**
 --
-$ python`
+$ python
+
 	>>> from mpi4py import MPI
 	>>> MPI.Get_version()
-			Gives the version of the standard to which the MPI library conforms; 					 major/minor versions
+			Gives the version of the standard to which the MPI library conforms;
+			major/minor versions
 OR
-`$ ompi_info --version`				   																								http://manpages.ubuntu.com/manpages/precise/man1/ompi_info.1.html
+
+`$ ompi_info --version`
+
+http://manpages.ubuntu.com/manpages/precise/man1/ompi_info.1.html
 
 
 **Commandline Tools**
@@ -37,14 +42,13 @@ Note that mpic++, mpicxx, and mpiCC all invoke the same underlying C++ compiler 
 mpirun, mpiexec, and orterun are all synonyms for each other. Using any of the names will produce the same behavior.
 
  mpirun
---------
 > mpirun uses the Open Run-Time Environment (ORTE) to launch jobs.  
 When you issue the mpirun command, you specify the name of the hostfile or host list on the command line; otherwise, mpirun executes all the copies of the program on the local host, in round-robin sequence by CPU slot. 
 MPI does the initial scheduling, but for more than one process per node, or just in general (since there are a number of other processes running in the background too),the Linux kernel scheduler takes over.
 
 
 **CPU Information**
-
+--
 https://www.cyberciti.biz/faq/lscpu-command-find-out-cpu-architecture-information/
 
 **Linux :**
